@@ -113,3 +113,6 @@ Route::get('func', function () {
 });
 
 Route::get('/geturl', 'WebsiteController@getDataAction');
+// Giử nhận dữ liệu
+Route::get('/getform', 'WebsiteController@getFormDataAction');
+Route::post('/getPostForm', 'WebsiteController@postForm')->name('postForm');
