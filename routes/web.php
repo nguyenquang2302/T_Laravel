@@ -116,3 +116,6 @@ Route::get('/geturl', 'WebsiteController@getDataAction');
 // Giử nhận dữ liệu
 Route::get('/getform', 'WebsiteController@getFormDataAction');
 Route::post('/getPostForm', 'WebsiteController@postForm')->name('postForm');
+
+Route::get('/setcookie', 'WebsiteController@setCookie');
+Route::get('/getcookie', 'WebsiteController@getCookie');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response; 
 
 class WebsiteController extends Controller
 {
@@ -39,5 +40,22 @@ class WebsiteController extends Controller
             // $request->except('hoten')  nhân  tất cả dữ liệu  trừ tham số hoten
             echo $request->input('hoten');
         }
+    }
+
+    public function setCookie() {
+        $response = new Response();
+        $response->withCookie('ten_cookie','value_cookie',1);
+        return $response;
+    }
+
+    public function getCookie(Request $request) {
+
+        return $request->cookie('ten_cookie');
+    }
+
+    public function getJson() {
+
+        $array = ['pt1','pt2','pt3','pt4'];
+        return response()->json($array);
     }
 }
