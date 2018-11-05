@@ -2,23 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Request;
 
-class WebsiteController extends BaseController
+class WebsiteController extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    public function testAction()
-    {
-        die('Đây là action test của websitecontroller');
+    //
+    public function testAction() {
+        return (' Xin chào ');
     }
 
-    public function test1Action($id)
-    {
-        die('Đây là action test của websitecontroller '.$id);
+    public function test1Action($id) {
+        return (' Xin chào '.$id);
     }
-    
+
+
 }
