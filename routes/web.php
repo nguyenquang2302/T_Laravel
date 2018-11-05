@@ -111,3 +111,5 @@ Route::get('func', function () {
 
     $action = Route::currentRouteAction();
 });
+
+Route::get('/geturl', 'WebsiteController@getDataAction');

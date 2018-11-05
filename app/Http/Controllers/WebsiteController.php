@@ -15,5 +15,7 @@ class WebsiteController extends Controller
         return (' Xin chào '.$id);
     }
 
-
+    public function getDataAction(Request $request) {
+        return $request->url(); 
+    }
 }
