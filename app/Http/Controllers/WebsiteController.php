@@ -16,6 +16,9 @@ class WebsiteController extends Controller
     }
 
     public function getDataAction(Request $request) {
+        if($request->isMethod('get')) {
+            echo ('phương thức get');
+        }
         return $request->url(); 
     }
 }
