@@ -1,1 +1,0 @@
- Xin chào Tôi đang học  lập trình <?php echo $laptrinh; ?>
