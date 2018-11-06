@@ -119,3 +119,11 @@ Route::post('/getPostForm', 'WebsiteController@postForm')->name('postForm');
 
 Route::get('/setcookie', 'WebsiteController@setCookie');
 Route::get('/getcookie', 'WebsiteController@getCookie');
+
+Route::get('/database',function() {
+    Schema::create('user',function($table) {
+        $table->increments('id')
+        ->string('full_name',255)
+        ->string('phone',255);
+    });
+});
