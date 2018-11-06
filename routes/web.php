@@ -17,7 +17,7 @@ Route::get('/', function () {
 // Routing
 Route::get('/hello', function () {
     return 'Hello World';
-});
+})->middleware('MyMiddle');
 // Routing sub path
 Route::get('/hello/slug', function () {
     return 'Học laravel';
