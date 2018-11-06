@@ -122,8 +122,14 @@ Route::get('/getcookie', 'WebsiteController@getCookie');
 
 Route::get('/database',function() {
     Schema::create('user',function($table) {
-        $table->increments('id')
-        ->string('full_name',255)
-        ->string('phone',255);
+        $table->increments('id');
+        $table->string('full_name',255);
+        $table->string('phone',255);;
+    });
+});
+
+Route::get('/editdatabase',function() {
+    Schema::table('user',function($table) {
+        $table->dropColumn('phone');
     });
 });
